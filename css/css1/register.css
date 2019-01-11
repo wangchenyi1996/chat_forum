@@ -1,0 +1,64 @@
+#register{
+	width: auto;
+	height: 600px;
+	border: 2px solid gray;
+	font-size: 12px;
+}
+
+#register h2{
+	text-indent: 0;
+	text-align: center;
+}
+
+#register form dl dd.face img{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+
+#register form dl dd.face{
+	padding: 5px 0 5px 120px;
+}
+
+#register form dl{
+	width: 400px;
+	margin: 0 auto;
+}
+
+#register form dl dt{
+	font-weight: bolder;
+	text-align: center;
+	padding: 10px 0;
+}
+
+#register form dl dd{
+	padding: 5px 0;
+}
+
+#register form dl dd input.text{
+	border: 1px dashed #EEEEEE;
+	width: 220px;
+	height: 19px;
+	background: ghostwhite;
+}
+
+#register form dl dd input.yzm{
+	width: 60px;
+	border: 1px dashed #EEEEEE;
+	background: azure;
+}
+
+#register form dl dd input.submit{
+	width: 60px;
+	height: 19px;
+	border: 1px dashed burlywood;
+	background: #FFFFFF;
+	margin: 0 0 0 120px;
+	cursor: pointer;
+}
+
+#register form dl dd img#code{
+	position: relative;
+	top: 8px;
+	cursor: pointer;
+}

@@ -1,0 +1,141 @@
+#post{
+	width: auto;
+	height: 600px;
+	border: 2px solid gray;
+	font-size: 12px;
+	position: relative;
+}
+
+#post h2{
+	text-indent: 0;
+	text-align: center;
+}
+
+#post form dl{
+	width: 420px;
+	margin: 0 auto;
+}
+
+#post form dl dt{
+	font-weight: bolder;
+	text-align: center;
+	padding: 10px 0;
+}
+
+#post form dl dd{
+	padding: 5px 0;
+}
+
+#post form dl dd#q a{
+	text-decoration: none;
+	color: #666;
+}
+
+#post form dl dd #ubb{
+	width: 420;
+	height: 30px;
+	border: 1px dashed #333;
+	border-bottom:1px solid #666 ;
+	background: #EEEEEE;
+}
+
+#post form dl dd #ubb img{
+	display: block;
+	float: left;
+	padding: 9px 0 0 9px;
+}
+
+#post form dl dd div#font{
+	font-size: 12px;
+	width: 100px;
+	height: 40px;
+	border: #333333 dashed 1px;
+	background: #EEEEEE;
+	padding: 8px;
+	position: absolute;
+	top: 200px;
+	left: 275px;
+	display: none;
+}
+
+#post form dl dd div#font strong{
+	font-weight: normal;
+	background: #fff;
+	border: #ccc solid 1px;
+	cursor: default;
+	
+}
+
+#post form dl dd div#color{
+	font-size: 12px;
+	width: 150px;
+	height: 130px;
+	border: #333333 dashed 1px;
+	background: #EEEEEE;
+	position: absolute;
+	top: 200px;
+	left: 400px;
+	display: none;
+}
+
+#post form dl dd div#color strong{
+	border: #999999 solid #000000px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 4px;
+}
+
+#post form dl dd div#color em{
+	display: block;
+	clear: both;
+	height: 25px;
+	width: 80%;
+}
+#post form dl dd div#color em input{
+	width: 130px;
+	height: 18px;
+	cursor: pointer;
+	margin: 4px;
+	background: #fff;
+}
+#post form dl dd textarea{
+	padding: 5px;
+	width: 408px;
+	border: 1px dashed #333333;
+	border-top: none;
+	background: #fff;
+	overflow-y: scroll;
+}
+
+#post form dl dd input.text{
+	border: 1px dashed #EEEEEE;
+	width: 250px;
+	height: 19px;
+	background: #F0FFFF;
+}
+
+#post form dl dd input.yzm{
+	width: 60px;
+	border: 1px dashed #EEEEEE;
+	background: azure;
+}
+
+#post form dl dd input.submit{
+	width: 60px;
+	height: 25px;
+	border: 1px dashed burlywood;
+	padding: 0 10px 0 0;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+#post form dl dd input.submit:hover{
+	background: #CCCCCC;
+}
+#post form dl dd img#code{
+	margin: 0 10px 0 10px;
+	position: relative;
+	top: 8px;
+	cursor: pointer;
+}

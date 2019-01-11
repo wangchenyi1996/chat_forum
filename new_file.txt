@@ -1,0 +1,85 @@
+<li class="icon3"><em>阅读数(12) 评论数(20)</em><a href="">李白  相思相见知何日？此时此夜难为情。</a></li>
+<li class="icon4"><em>阅读数(12) 评论数(20)</em><a href="">李白  相思相见知何日？此时此夜难为情。</a></li>
+<li class="icon5"><em>阅读数(27) 评论数(63)</em><a href="">纳兰性德 凄凉别後两应同，最是不胜清怨月明中。</a></li>
+<li class="icon6"><em>阅读数(31) 评论数(54)</em><a href="">陈衡恪 嗟余只影系人间，如何同生不同死？</a></li>
+<li class="icon7"><em>阅读数(33) 评论数(24)</em><a href="">张先 天不老，情难绝。心似双丝网，中有千千结。</a></li>
+<li class="icon8"><em>阅读数(33) 评论数(24)</em><a href="">张先 天不老，情难绝。心似双丝网，中有千千结。</a></li>
+<li class="icon9"><em>阅读数(88) 评论数(69)</em><a href="">元好问 问世间，情是何物，直教生死相许。</a></li>
+<li class="icon10"><em>阅读数(38) 评论数(19)</em><a href="">李之仪 此水几时休，只愿君心似我心，不负相思意。</a></li>
+<li class="icon2"><em>阅读数(33) 评论数(29)</em><a href="">白居易  天长地久有时尽，此恨绵绵无绝期。</a></li>
+<li class="icon11"><em>阅读数(27) 评论数(63)</em><a href="">纳兰性德 凄凉别後两应同，最是不胜清怨月明中。</a></li>
+
+//分页函数
+function _page($type){
+	global $_page,$pagemax,$num;
+	if($type==1){
+	echo '<div id="page_num">';
+		echo'<ul>';	
+			for($i=1;$i<=$pagemax;$i++){
+				//把blog换成常量SCRIPT
+				/*if($_page==$i){
+					echo '<li><a href="blog.php?page='.($i).'" class="selected">'.($i).'</a></li>';
+				}else{
+					echo '<li><a href="blog.php?page='.($i).'">'.($i).'</a></li>';
+				}*/
+				if($_page==$i){
+					echo '<li><a href="'.SCRIPT.'.php?page='.($i).'" class="selected">'.($i).'</a></li>';
+				}else{
+					echo '<li><a href="'.SCRIPT.'.php?page='.($i).'">'.($i).'</a></li>';
+				}
+			}	
+		echo'</ul>';	
+	echo '</div>';
+	}elseif($type==2){
+		echo '<div id="page_text">';
+			echo '<ul style="text-align: center;">';
+				//输出分页信息，显示上一页和下一页的连接
+				echo "<br/><br/>";
+				echo "<a>当前{$_page}/{$pagemax}页  | 共有{$num}条数据</a>";
+				//把blog换成常量SCRIPT
+				/*echo " <a href='blog.php?page=1'>首页</a> ";
+				echo " <a href='blog.php?page=".($_page-1)."'>上一页</a> ";
+				echo " <a href='blog.php?page=".($_page+1)."'>下一页</a> ";
+				echo " <a href='blog.php?page={$pagemax}'>末页</a> ";*/
+				
+				echo ' <a href="'.SCRIPT.'.php?page=1">首页</a> ';
+				echo ' <a href="'.SCRIPT.'.php?page='.($_page-1).'">上一页</a> ';
+				echo ' <a href="'.SCRIPT.'.php?page='.($_page+1).'">下一页</a> ';
+				echo ' <a href="'.SCRIPT.'.php?page='.$pagemax.'">末页</a> ';
+			echo '</ul>';
+		echo '</div>';
+	}else{
+		//如果参数都错了的话，就默认为第一种方式
+		_page(1);
+	}
+}
+
+function page($_sql,$size){//$_pagesize是每页的条数
+	//定义全局变量，函数外也可以访问
+	global $_pagesize,$_pagenum,$_page,$pagemax,$num;
+	
+	//先判断page,容错处理（page=0或者page=''）
+	if(isset($_GET['page'])){
+		$_page=$_GET['page'];
+		if(empty($_page)||$_page<=0||!is_numeric($_page)){
+			$_page=1;
+		}else{//page=2.5(取整)
+			$_page=intval($_page);
+		}
+	}else{
+		$_page=1;
+	}
+	$_pagesize=$size;//每页的条数
+	//首先获得所有数据总和
+	$num=_num_rows(_query($_sql));
+	if($num==0){
+		$_page=1;
+	}else{
+		$pagemax=ceil($num/$_pagesize);//总的页数
+	}
+	//如果page大于总页码
+	if($_page>$pagemax){
+		$_page=$pagemax;
+	}
+	$_pagenum=($_page-1)*$_pagesize;
+}

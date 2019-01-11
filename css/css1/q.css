@@ -1,0 +1,30 @@
+body{
+	width: auto;
+}
+#q dl dd img{
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+#q dl dd img:hover{
+	border: #333333 1px solid;
+}
+#q h3{
+	text-align: center;
+	border: 1px dashed #333;
+	width: 80%;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px auto;
+}
+
+#q dl{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#q dl dd{
+	width: 102px;
+	text-align: center;
+	float: left;
+}

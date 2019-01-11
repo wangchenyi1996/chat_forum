@@ -1,0 +1,44 @@
+#photo{
+	width: auto;
+	height: 600px;
+	border: 2px solid gray;
+	font-size: 12px;
+}
+
+#photo h2{
+	text-indent: 0;
+	text-align: center;
+}
+
+#photo p{
+	text-align: center;
+	padding: 20px;
+	clear: both;
+}
+#photo p a{
+	font-size: 14px;
+	color: #666;
+	text-decoration: underline;
+}
+#photo p a:hover{
+	color: lightcoral;
+}
+
+
+#photo dl{
+	margin: 30px 30px;
+	float: left;
+	text-align: center;
+}
+
+#photo dl dd{
+	padding: 2px 0;
+}
+
+#photo dl dd a{
+	color: burlywood;
+	text-decoration: none;
+}
+#photo dl dd a:hover{
+	color: lightcoral;
+}

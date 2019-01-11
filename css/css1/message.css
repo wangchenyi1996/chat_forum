@@ -1,0 +1,53 @@
+body{
+	width: auto;
+}
+
+#message h3{
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px auto;
+	text-align: center;
+	border: 1px dashed #333;
+	background: #eee;
+}
+
+#message dl{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#message dl dd{
+	margin:  5px 0;
+}
+
+#message dl dd input.text{
+	border: 1px dashed #333;
+	width: 180px;
+	height: 19px;
+	background: white;
+}
+
+#message dl dd input.yzm{
+	width: 60px;
+}
+
+#message dl dd textarea{
+	width: 100%;
+	height: 120px;
+	border: 1px dashed #333;
+	background: white;
+	overflow: scroll;
+}
+
+#message dl dd img#code{
+	position: relative;
+	top: 8px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+#message dl dd input.submit{
+	margin-left: 10px;
+	cursor: pointer;
+}

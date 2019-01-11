@@ -1,0 +1,57 @@
+#photo{
+	width: auto;
+	height: 600px;
+	border: 2px solid gray;
+	font-size: 12px;
+}
+
+#photo h2{
+	text-indent: 0;
+	text-align: center;
+}
+
+#photo p{
+	text-align: center;
+	padding: 20px;
+	clear: both;
+}
+#photo p a{
+	font-size: 14px;
+	color: #333;
+	text-decoration: underline;
+}
+#photo p a:hover{
+	font-size: 14px;
+	color: lightcoral;
+}
+#photo dl{
+	width: 150px;
+	height: 180px;
+	margin: 20px;
+	float: left;
+}
+#photo dl dt{
+	background: url(../../img/photo1.jpg);
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+#photo dl dt img{
+	width: 80px;
+	height: 80px;
+	display: block;
+	padding: 10px;
+}
+#photo dl dd{
+	text-align: center;
+	width: 100px;
+	margin: 0 auto;
+	padding: 5px 0;
+}
+#photo dl dd a{
+	color: #333;
+	text-decoration: none;
+}
+#photo dl dd a:hover{
+	color: lightcoral;
+}
